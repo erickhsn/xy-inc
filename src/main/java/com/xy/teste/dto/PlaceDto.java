@@ -1,5 +1,6 @@
 package com.xy.teste.dto;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -11,9 +12,11 @@ public class PlaceDto {
 	private String name;
 	
 	@NotNull
+	@Min(0)
 	private int x;
 	
 	@NotNull
+	@Min(0)
 	private int y;
 
 		
