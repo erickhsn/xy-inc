@@ -17,6 +17,7 @@ public class PlaceDAO implements IPlaceDAO {
 	@PersistenceContext
 	EntityManager em;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Collection<Place> getPlaces() {
 	    Query query = em.createQuery("SELECT p FROM Place p");
