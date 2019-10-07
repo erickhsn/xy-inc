@@ -17,11 +17,11 @@ import com.xy.teste.dto.PositionDto;
 import com.xy.teste.service.IPointOfInterest;
 
 @RestController
-public class InteresetPointController {
+public class InterestPointController {
 	
 	private IPointOfInterest pointOfInterest;
 	
-	public InteresetPointController(IPointOfInterest pointOfInterest)
+	public InterestPointController(IPointOfInterest pointOfInterest)
 	{
 		this.pointOfInterest = pointOfInterest;
 	}
