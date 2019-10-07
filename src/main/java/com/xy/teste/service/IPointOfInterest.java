@@ -10,5 +10,5 @@ public interface IPointOfInterest {
 	
 	void insertPlace(PlaceDto placeDto);
 	
-	List<PlaceDto> getPointsOfInterest(PositionDto positionDto);
+	List<PointOfInterestResultDto> getPointsOfInterest(PositionDto positionDto);
 }

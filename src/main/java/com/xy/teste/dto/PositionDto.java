@@ -1,19 +1,23 @@
 package com.xy.teste.dto;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PositionDto {
 	
-	@NotNull
+	@NotNull(message = "Insira um valor para x")
+	@Min(0)
 	private int x;
 	
-	@NotNull
+	@NotNull(message = "Insira um valor para y")
+	@Min(0)
 	private int y;
 	
 	@NotNull
 	@JsonProperty("max_distance")
+	@Min(0)
 	private int maxDistance;
 
 	
