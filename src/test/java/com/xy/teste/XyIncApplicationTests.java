@@ -75,7 +75,17 @@ public class XyIncApplicationTests {
 		List<PointOfInterestResultDto> result = interestPoint.getPointsOfInterest(position);
 		assertEquals(0, result.size());
 	}
-
+	
+	@Test
+	public void allPlaces()
+	{
+		List<Place> places = mockPlaces();
+		when(placeDAO.getPlaces()).thenReturn(places);
+		
+		List<PlaceDto> result = interestPoint.getPlaces();
+		assertEquals(7, result.size());
+	}
+	
 	private List<Place> mockPlaces() {
 		return Arrays.asList(new Place(1, "Lanchonete", 27, 12), new Place(2, "Posto", 31, 18),
 				new Place(3, "Joalheria", 15, 12), new Place(4, "Floricultura", 19, 21), new Place(5, "Pub", 12, 8),
